@@ -1,0 +1,18 @@
+<div class="container">
+  <!-- Add a dropdown for type selection -->
+  <!-- Rest of the code -->
+
+  <div class="row">
+    <div class="col-md-4" *ngFor="let part of filteredParts$ | async">
+      <div class="card mt-4">
+        <img class="card-img-top" [src]="part.image" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{ part.name }}</h5>
+          <p class="card-text">{{ part.description }}</p>
+          <p class="card-text">Price: {{ part.price }}</p> <!-- Add this line to display the price -->
+          <button class="btn btn-primary" (click)="addToCart(part)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

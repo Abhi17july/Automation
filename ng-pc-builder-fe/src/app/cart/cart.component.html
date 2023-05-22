@@ -1,0 +1,22 @@
+<!-- cart.component.html -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Total Price: {{ totalPrice$ | async }}</h3>
+    </div>
+  </div>
+<div class="container">
+    <div class="row" *ngFor="let item of cartItems$ | async">
+      <div class="col-md-4">
+        <div class="card mt-4">
+          <img class="card-img-top" [src]="item.image" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{ item.name }}</h5>
+            <p class="card-text">{{ item.description }}</p>
+            <button class="btn btn-danger" (click)="removeFromCart(item)">Remove from Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

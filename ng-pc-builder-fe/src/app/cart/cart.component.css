@@ -1,0 +1,14 @@
+/* cart.component.css */
+.container {
+    margin-top: 20px;
+  }
+  
+  .card {
+    width: 18rem;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: auto;
+  }
+  
