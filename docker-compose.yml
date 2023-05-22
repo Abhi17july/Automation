@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  server:
+    build:
+      context: ./java-pc-builder-be
+    ports:
+      - 8080:8080
+    networks:
+      - my-network
+  client:
+    build:
+      context: ./ng-pc-builder-fe
+    ports:
+      - 4200:80
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    name: my-network
+
